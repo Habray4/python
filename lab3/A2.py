@@ -18,10 +18,17 @@ if(p==buf):
     print("Нет Строчных Букв")
     nad = 0;
 
-if(not (any(symbol.isdigit() for symbol in p))):
-    print("Нет Цифор")
+ss = '1234567890'
+buf = 0
+for i in p:
+    for j in ss:
+        if(i==j):
+            buf = 1
+if(buf==0):
+    print("Нет Цифр")
     nad = 0;
 
+ss = '*-#'
 buf = 0
 for i in p:
     for j in ss:
